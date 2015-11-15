@@ -1,0 +1,39 @@
+
+$bodyColor: #EEFFFF;
+
+$primaryColor: #26519E;
+$wPanelColor: lighten(#447742,10%);
+$defMargin: 1%;
+
+#about {
+	text-align: center;
+}
+.forecast {
+
+}
+.weather-panel {
+	width: 200px;
+	height: 300px;
+	background-color: $wPanelColor;
+	margin: auto;
+	border: 2px solid black;
+	box-shadow: 0.5px 3px 4px darken($wPanelColor,10%);
+	overflow: hidden;
+	transition: 200ms ease;
+	&:hover
+	{
+		background-color: #3AB8D0;
+		// width: 300px;
+		transform: scale(1.1);
+		padding-top: 10px;
+	}
+}
+
+
+h1 {
+	color: $primaryColor;
+}
+
+body {
+	background-color: $bodyColor;
+}
