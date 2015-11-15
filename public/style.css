@@ -2,7 +2,8 @@
   text-align: center; }
 
 .forecast {
-  height: 80px; }
+  height: 80px;
+  width: 40px; }
 
 .weather-panel {
   width: 220px;
