@@ -3,21 +3,22 @@
 <head>
 	<title>Scss playground</title>
 	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
-
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="vendors/weather-icons/css/weather-icons.min.css">
 </head>
 <body>	
-	<section id="about">
-		<div class="container">
-			<h1>Weather App</h1>
-			<div class="weather-panel">
-				<h1>something</h1>
-			</div>
-			<div class="forecast"></div>
+	<div class="weather-panel">
+		<h1 class="weather-panel__city">
+			Jaworzno
+		</h1>
+		<div class="weather-panel__main"><i class="wi wi-day-sunny-overcast wi--main"></i></div>
+		<div class="weather-panel__forecast">
+			<div class="weather-panel__day"><i class="wi--lg wi wi-day-sunny"></i></div>
+			<div class="weather-panel__day"><i class="wi--lg wi wi-day-cloudy"></i></div>
+			<div class="weather-panel__day"></div>
+			<div class="weather-panel__day"></div>
 		</div>
-
 	</div>
-</section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->

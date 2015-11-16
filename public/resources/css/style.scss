@@ -1,0 +1,83 @@
+
+$bodyColor: #5B89B1;
+
+$primaryColor: #26519E;
+$wPanelColor: lighten(#447742,10%);
+$defMargin: 1%;
+$forecastCount: 4;
+
+$sm: "(max-width: 40em)";
+// @mixin media(size)
+
+.wi--main {
+	font-size: 7em;
+	margin-top: .5em;
+	@media #{$sm} {
+		font-size: 9em;
+	}
+}
+
+.wi--lg {
+	font-size: 3em;
+	color: #fff;
+	margin-top: .4em;
+	// overflow: hidden;
+	@media #{$sm} {
+		font-size: 4em;
+		margin-top: .2em;
+	}
+}
+
+.weather-panel {
+	width: 40%;
+	height: 50%;
+	background-color: transparentize($wPanelColor, .2);
+	margin: 15% auto;
+	box-shadow: 0.5px 4px 4px darken($wPanelColor,10%);
+	@media #{$sm}{
+		width: 100%;
+	}
+}
+
+.weather-panel__main {
+	height: 65%;
+	width: 100%;
+	background-color: #FFF;
+	margin: 0;
+	display: inline-block; // sprawdzić 
+}
+
+.weather-panel__city {
+	text-align: center;
+	font-size: 1.8em;
+	margin: 0;
+	color: darken(salmon,10%);
+}
+
+.weather-panel__forecast
+{
+	height: 70%;
+	text-align: center;
+	&:after{
+		both: clear; 
+	}
+}
+
+.weather-panel__day{
+	width: (100%/$forecastCount);
+	height: 33%;
+	float: left;
+	background-color: #EAA89C;
+	box-shadow: inset 1px 1px 2px grey;
+	display: inline-block;
+}
+
+body {
+	background-color: $bodyColor;
+	
+}
+
+html,
+body {
+	height: 100%;
+}
