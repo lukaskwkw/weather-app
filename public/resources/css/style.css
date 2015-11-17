@@ -1,6 +1,5 @@
 .wi--main {
-  font-size: 7em;
-  margin-top: .5em; }
+  font-size: 7em; }
   @media (max-width: 40em) {
     .wi--main {
       font-size: 9em; } }
@@ -16,9 +15,9 @@
 
 .weather-panel {
   width: 40%;
-  height: 50%;
+  height: 350px;
   background-color: rgba(87, 152, 84, 0.8);
-  margin: 15% auto;
+  margin: 10% auto;
   box-shadow: 0.5px 4px 4px #447742; }
   @media (max-width: 40em) {
     .weather-panel {
@@ -34,18 +33,19 @@
 .weather-panel__city {
   text-align: center;
   font-size: 1.8em;
+  height: 10%;
   margin: 0;
   color: #f85441; }
 
 .weather-panel__forecast {
-  height: 70%;
+  height: 25%;
   text-align: center; }
   .weather-panel__forecast:after {
     both: clear; }
 
 .weather-panel__day {
   width: 25%;
-  height: 33%;
+  height: 100%;
   float: left;
   background-color: #EAA89C;
   box-shadow: inset 1px 1px 2px grey;

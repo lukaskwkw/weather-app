@@ -1,0 +1,101 @@
+{"coord":{"lon":19.3,"lat":50.19},
+"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}],
+"base":"cmc stations",
+"main":{"temp":280.118,"pressure":990.54,
+"humidity":95,"temp_min":280.118,
+"temp_max":280.118,"sea_level":1028.28,
+"grnd_level":990.54},
+"wind":{"speed":4.47,"deg":234.007},
+"clouds":{"all":76},
+"dt":1447710918,
+"sys":{"message":0.0095,"country":"PL","sunrise":1447653513,"sunset":1447685773},
+"id":7531790,"name":"Jaworzno","cod":200}
+
+
+{
+    "subdivisions": [
+        {
+            "names": {
+                "ru": "Силезское воеводство",
+                "en": "Silesian Voivodeship",
+                "zh-CN": "西里西亚省",
+                "ja": "シロンスク県",
+                "fr": "Voïvodie de Silésie",
+                "es": "Silesia",
+                "de": "Woiwodschaft Schlesien"
+            },
+            "iso_code": "SL",
+            "geoname_id": 3337497
+        }
+    ],
+    "city": {
+        "names": {
+            "ja": "ヤヴォジュノ",
+            "zh-CN": "亚沃日诺",
+            "en": "Jaworzno",
+            "ru": "Явожно"
+        },
+        "geoname_id": 3097333
+    },
+    "location": {
+        "time_zone": "Europe/Warsaw",
+        "latitude": 50.2053,
+        "longitude": 19.275
+    },
+    "traits": {
+        "organization": "Netia Telekom SA",
+        "ip_address": "83.238.226.143",
+        "autonomous_system_organization": "Netia SA",
+        "isp": "Netia SA",
+        "autonomous_system_number": 12741,
+        "domain": "inetia.pl"
+    },
+    "country": {
+        "iso_code": "PL",
+        "geoname_id": 798544,
+        "names": {
+            "pt-BR": "Polônia",
+            "es": "Polonia",
+            "ja": "ポーランド共和国",
+            "fr": "Pologne",
+            "zh-CN": "波兰",
+            "ru": "Польша",
+            "en": "Poland",
+            "de": "Polen"
+        }
+    },
+    "continent": {
+        "names": {
+            "es": "Europa",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "fr": "Europe",
+            "ru": "Европа",
+            "en": "Europe",
+            "zh-CN": "欧洲",
+            "de": "Europa"
+        },
+        "code": "EU",
+        "geoname_id": 6255148
+    },
+    "registered_country": {
+        "geoname_id": 798544,
+        "iso_code": "PL",
+        "names": {
+            "de": "Polen",
+            "ru": "Польша",
+            "en": "Poland",
+            "zh-CN": "波兰",
+            "ja": "ポーランド共和国",
+            "pt-BR": "Polônia",
+            "es": "Polonia",
+            "fr": "Pologne"
+        }
+    },
+    "postal": {
+        "code": "43-600"
+    },
+    "represented_country": {
+        "names": {}
+    }
+}
