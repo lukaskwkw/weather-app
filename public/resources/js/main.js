@@ -79,7 +79,7 @@ var query = {
 	system: "metric",
 	longitude: 0,
 	latitude: 0,
-	appId: "47902d5ac7188967cf37a70171926c43",
+	appId: "",
 	request: ''
 }
 
