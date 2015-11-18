@@ -18,7 +18,18 @@
 "dt":1447790400,"wind":{"speed":6.7,"deg":220},"sys":{"country":"PL"},"clouds":{"all":75},
 "weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}]}]}
 
-{"coord":{"lon":19.92,"lat":50.08},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":12.66,"pressure":980.05,"humidity":91,"temp_min":12.66,"temp_max":12.66,"sea_level":1019.32,"grnd_level":980.05},"wind":{"speed":11.06,"deg":240.501},"clouds":{"all":56},"dt":1447835565,"sys":{"message":0.0091,"country":"PL","sunrise":1447826279,"sunset":1447858345},"id":3094802,"name":"Krakow","cod":200}
+{"coord":{"lon":19.92,"lat":50.08},
+"weather":[{"id":803,"main":"Clouds",
+"description":"broken clouds","icon":"04d"}],
+"base":"cmc stations","main":{"temp":12.66,
+"pressure":980.05,"humidity":91,"temp_min":12.66,
+"temp_max":12.66,"sea_level":1019.32,
+"grnd_level":980.05},"wind":{"speed":11.06,
+"deg":240.501},"clouds":{"all":56},
+"dt":1447835565,"sys":{"message":0.0091,
+"country":"PL","sunrise":1447826279,
+"sunset":1447858345},"id":3094802,
+"name":"Krakow","cod":200}
 
 {"coord":{"lon":19.27,"lat":50.21},
 "weather":[{"id":500,
