@@ -1,55 +1,85 @@
+.mod--hand {
+  cursor: pointer; }
+
 .wi--main {
-  font-size: 7em; }
+  font-size: 9em; }
   @media (max-width: 40em) {
     .wi--main {
       font-size: 9em; } }
 
 .wi--lg {
-  font-size: 3em;
-  color: #fff;
-  margin-top: .4em; }
+  font-size: 2em;
+  text-align: center;
+  margin-top: 15%;
+  padding-right: 10px; }
   @media (max-width: 40em) {
     .wi--lg {
-      font-size: 4em;
-      margin-top: .2em; } }
+      font-size: 2.7em; } }
+
+.city {
+  padding-top: 10%;
+  text-align: center;
+  font-size: 4em;
+  margin: 0;
+  color: white; }
 
 .weather-panel {
-  width: 40%;
+  color: black;
+  width: 43%;
   height: 350px;
-  background-color: rgba(87, 152, 84, 0.8);
-  margin: 10% auto;
-  box-shadow: 0.5px 4px 4px #447742; }
+  opacity: 0.7;
+  margin: 3% auto;
+  box-shadow: 0.5px 0.5px 2px 2px black; }
+  .weather-panel:hover {
+    opacity: 1; }
   @media (max-width: 40em) {
     .weather-panel {
       width: 100%; } }
 
 .weather-panel__main {
-  height: 65%;
+  text-align: center;
+  height: 75%;
   width: 100%;
   background-color: #FFF;
   margin: 0;
-  display: inline-block; }
+  display: block;
+  transition: .5s; }
 
-.weather-panel__city {
-  text-align: center;
-  font-size: 1.8em;
-  height: 10%;
-  margin: 0;
-  color: #f85441; }
+.weather-panel__main__temp {
+  font-size: 2em;
+  text-align: right;
+  float: right;
+  margin-right: 8px;
+  margin-bottom: -40px; }
 
-.weather-panel__forecast {
+.weather-panel__main__sub {
+  margin-top: 2em;
+  font-size: 2em;
+  display: block; }
+
+.weather-panel__main__sub__temp-max {
+  margin-left: 3%;
+  float: left;
+  color: #ff3333; }
+
+.weather-panel__main__sub__temp-min {
+  margin-right: 3%;
+  float: right;
+  color: #3333ff; }
+
+.weather-panel__add {
   height: 25%;
   text-align: center; }
-  .weather-panel__forecast:after {
+  .weather-panel__add:after {
     both: clear; }
 
-.weather-panel__day {
+.weather-panel__add__unit {
   width: 25%;
   height: 100%;
   float: left;
-  background-color: #EAA89C;
+  background-color: #fff;
   box-shadow: inset 1px 1px 2px grey;
-  display: inline-block; }
+  transition: .5s ease; }
 
 body {
   background-color: #5B89B1; }

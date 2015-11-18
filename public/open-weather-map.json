@@ -11,6 +11,50 @@
 "sys":{"message":0.0095,"country":"PL","sunrise":1447653513,"sunset":1447685773},
 "id":7531790,"name":"Jaworzno","cod":200}
 
+{"message":"accurate","cod":"200","count":1,
+"list":
+[{"id":3097333,"name":"Jaworzno","coord":{"lon":19.274981,"lat":50.20528},
+"main":{"temp":11,"pressure":1010,"humidity":81,"temp_min":11,"temp_max":11},
+"dt":1447790400,"wind":{"speed":6.7,"deg":220},"sys":{"country":"PL"},"clouds":{"all":75},
+"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}]}]}
+
+{"coord":{"lon":19.92,"lat":50.08},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":12.66,"pressure":980.05,"humidity":91,"temp_min":12.66,"temp_max":12.66,"sea_level":1019.32,"grnd_level":980.05},"wind":{"speed":11.06,"deg":240.501},"clouds":{"all":56},"dt":1447835565,"sys":{"message":0.0091,"country":"PL","sunrise":1447826279,"sunset":1447858345},"id":3094802,"name":"Krakow","cod":200}
+
+{"coord":{"lon":19.27,"lat":50.21},
+"weather":[{"id":500,
+"main":"Rain",
+"description":"light rain",
+"icon":"10n"}],
+"base":"cmc stations",
+"main":{"temp":284.651,
+"pressure":984.03,
+"humidity":92,
+"temp_min":284.651,
+"temp_max":284.651,
+"sea_level":1020.9,
+"grnd_level":984.03},
+"wind":{"speed":8.62,"deg":245.003},
+"rain":{"3h":0.335},
+"clouds":{"all":92},
+"dt":1447825427,
+"sys":{"message":0.0175,
+"country":"PL",
+"sunrise":1447826452,
+"sunset":1447858481}
+,"id":3097333,"name":"Jaworzno","cod":200}
+
+{
+"message":"accurate","cod":"200","count":1,
+"list":
+[{"id":3097333,"name":"Jaworzno",
+"coord":{"lon":19.274981,"lat":50.20528},
+"main":{"temp":283.207,"temp_min":283.207,"temp_max":283.207,"pressure":987.12,"sea_level":1024.37,"grnd_level":987.12,"humidity":93},
+"dt":1447790833,"wind":{"speed":6.55,"deg":239.502},
+"sys":{"country":"PL"},"rain":{"3h":0.335},"clouds":{"all":88},
+"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10n"}]
+}]
+}
+
 
 {
     "subdivisions": [

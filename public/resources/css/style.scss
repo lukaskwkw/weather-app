@@ -9,8 +9,13 @@ $forecastCount: 4;
 $sm: "(max-width: 40em)";
 // @mixin media(size)
 
+.mod--hand{
+  cursor: pointer;
+}
+
 .wi--main {
-	font-size: 7em;
+	font-size: 9em;
+	// float: left;
 	// margin-top: .5em;
 	@media #{$sm} {
 		font-size: 9em;
@@ -18,44 +23,85 @@ $sm: "(max-width: 40em)";
 }
 
 .wi--lg {
-	font-size: 3em;
-	color: #fff;
-	margin-top: .4em;
-	// overflow: hidden;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 15%;
+	padding-right: 10px;
 	@media #{$sm} {
-		font-size: 4em;
-		margin-top: .2em;
+		font-size: 2.7em;
 	}
+}
+
+.city {
+	padding-top: 10%;
+	text-align: center;
+	font-size: 4em;
+	margin: 0;
+	color: white;
 }
 
 .weather-panel {
-	width: 40%;
+	color: black;
+	width: 43%;
 	height: 350px;
-	background-color: transparentize($wPanelColor, .2);
-	margin: 10% auto;
-	box-shadow: 0.5px 4px 4px darken($wPanelColor,10%);
+ 	opacity: 0.7;
+	margin: 3% auto;
+	box-shadow: 0.5px 0.5px 2px 2px black;
+    &:hover {
+    opacity: 1;
+  }
 	@media #{$sm}{
 		width: 100%;
 	}
+
 }
 
+
 .weather-panel__main {
-	height: 65%;
+	text-align: center;
+	height: 75%;
 	width: 100%;
 	background-color: #FFF;
 	margin: 0;
-	display: inline-block; // sprawdzić 
+	display: block;
+	transition: .5s;
+	&:hover {
+	}
 }
 
-.weather-panel__city {
-	text-align: center;
-	font-size: 1.8em;
-	height: 10%;
-	margin: 0;
-	color: darken(salmon,10%);
+
+.weather-panel__main__temp
+{
+	font-size: 2em;
+	text-align: right;
+	float: right;
+	margin-right: 8px;
+	margin-bottom: -40px;
 }
 
-.weather-panel__forecast
+.weather-panel__main__sub{
+		margin-top: 2em;
+	font-size: 2em;
+	display: block;
+
+
+}
+
+.weather-panel__main__sub__temp-max{
+	margin-left: 3%;
+	float: left;
+	color: lighten(red,10%);
+
+}
+.weather-panel__main__sub__temp-min{
+	margin-right: 3%;
+	float: right;
+	color: lighten(blue,10%);
+}
+
+
+
+.weather-panel__add
 {
 	height: 25%;
 	text-align: center;
@@ -64,13 +110,13 @@ $sm: "(max-width: 40em)";
 	}
 }
 
-.weather-panel__day{
+.weather-panel__add__unit{
 	width: (100%/$forecastCount);
 	height: 100%;
 	float: left;
-	background-color: #EAA89C;
+	background-color: #fff;
 	box-shadow: inset 1px 1px 2px grey;
-	display: inline-block;
+	transition: .5s ease;
 }
 
 body {

@@ -1,19 +1,57 @@
 $(document).ready(function() {
-
+//http://all-free-download.com/free-photos/snow-mountain.html
 	// $(".weather-panel__city").html(json.name);
 	// $(".wi--main").addClass("wi wi-owm-"+json.weather[0].id);
+  $('.js-toggle-unit').on("click",function()
+  {
+    if($(this).hasClass("wi-celsius"))
+	{   
+		data.temp = Math.round((data.temp * 9/5 + 32)*10)/10;
+		data.tempMin = Math.round((data.tempMin * 9/5 + 32)*10)/10;
+		data.tempMax = Math.round((data.tempMax * 9/5 + 32)*10)/10;
+ 		$('.js-toggle-unit').removeClass("wi-celsius").addClass("wi-fahrenheit")
+        $(".js-temp-main").html(data.temp);
+		$(".js-temp-max").html(data.tempMin);
+		$(".js-temp-min").html(data.tempMax);
+  // this.text trzeba albo ze zmiennej utworzonej
+	}	
+    else
+      { 
+      	data.temp = Math.round(((data.temp - 32) * 5/9)*10)/10;
+		data.tempMin = Math.round(((data.tempMin - 32) * 5/9)*10)/10;
+		data.tempMax = Math.round(((data.tempMax - 32) * 5/9)*10)/10;
+        $('.js-toggle-unit').removeClass("wi-fahrenheit").addClass("wi-celsius")
+        $(".js-temp-main").html(data.temp);
+		$(".js-temp-max").html(data.tempMin);
+		$(".js-temp-min").html(data.tempMax);
+
+
+      }
+  })
 	getLanguage();
-	getLocation();
-	// sendRequest();
+/*	getLocation();*/
+  /* geoip2.city(onSuccessGeoIp2, onErrorGeoIp2);*/
+ fetchData(json2); // for testing due to not exceed max limit of the api key
 // console.log(query);
-   geoip2.city(onSuccessGeoIp2, onErrorGeoIp2);
 });
 
-function fetchDataCity(json) {
-	console.log(JSON.stringify(json));
-	$(".weather-panel__city").html(json.list[0].name);
-	$(".wi--main").addClass("wi wi-owm-"+json.list[0].weather[0].id);
+function fetchData(json) {
+	// console.log(JSON.stringify(json));
+	data.temp = Math.round(json.main.temp*10)/10;
+	data.tempMin = Math.round(json.main.temp_min*10)/10;
+	data.tempMax  = Math.round(json.main.temp_max*10)/10;
+	$(".js-city").html(json.name);
+	$(".js-weather-icon").addClass("wi wi-owm-"+json.weather[0].id);;
+	$(".js-temp-main").html(data.temp);
+	$(".js-temp-max").html(data.tempMin);
+	$(".js-temp-min").html(data.tempMax);
+	$(".js-humidity").html(json.main.humidity)
+	$(".js-barometer").html(json.main.pressure)
+	if (json.hasOwnProperty('rain'))
+	$(".js-raindrops").html((json.rain['3h']*100)+"%")
+	$(".js-wind").html(json.wind.speed)
 }
+
 
 function sendRequest () {
 	if (query.latitude !== 0 && query.longitude !== 0)
@@ -28,7 +66,7 @@ function sendRequest () {
 else
 {
 console.log("sending this way: ", query.request)
-$.getJSON(query.request, fetchDataCity);
+$.getJSON(query.request, fetchData);
 }
 
 }
@@ -53,13 +91,9 @@ function getLocation() {
 }
 
 var onSuccessGeoIp2 = function(location){
-	// console.log(
-	// 	"Lookup successful:\n\n"
-	// 	+ JSON.stringify(location, undefined, 4)
-	// 	);
  query.city = location.city.names.en;// + ", " + location.subdivisions[0].names.en;
  query.request =
-  "http://api.openweathermap.org/data/2.5/find?q="+
+  "http://api.openweathermap.org/data/2.5/weather?q="+
   query.city+"&units="+query.system+
 	"&appid="+query.appId;
  
@@ -79,11 +113,18 @@ var query = {
 	system: "metric",
 	longitude: 0,
 	latitude: 0,
-	appId: "",
+	appId: "47902d5ac7188967cf37a70171926c43",
 	request: ''
 }
 
-var json2 = {"coord":{"lon":19.3,"lat":50.19},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"base":"cmc stations","main":{"temp":282.665,"pressure":988.15,"humidity":95,"temp_min":282.665,"temp_max":282.665,"sea_level":1025.38,"grnd_level":988.15},"wind":{"speed":6.91,"deg":227.501},"rain":{"3h":0.28},"clouds":{"all":88},"dt":1447756528,"sys":{"message":0.0092,"country":"PL","sunrise":1447739964,"sunset":1447772135},"id":7531790,"name":"Jaworzno","cod":200}
+var data = {
+	temp: 0,
+	tempMin: 0,
+	tempMax: 0
+}
+
+var json2 = {"coord":{"lon":19.92,"lat":50.08},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":12.66,"pressure":980.05,"humidity":91,"temp_min":12.66,"temp_max":12.66,"sea_level":1019.32,"grnd_level":980.05},"wind":{"speed":11.06,"deg":240.501},"clouds":{"all":56},"dt":1447835565,"sys":{"message":0.0091,"country":"PL","sunrise":1447826279,"sunset":1447858345},"id":3094802,"name":"Krakow","cod":200}
+
 
 /*
 
